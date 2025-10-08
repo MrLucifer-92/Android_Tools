@@ -1,0 +1,60 @@
+name: Build and Release Android Tools
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Prepare Package
+      run: |
+        # Set the zip file name as an environment variable for reuse
+        DATE=$(date +%Y-%m-%d)
+        RANDOM_ID=$RANDOM
+        TAG_NAME="v${DATE}-${RANDOM_ID}"
+        ZIP_NAME="Android_Tools_${TAG_NAME}_ravindu644.zip"
+        echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+        echo "ZIP_NAME=${ZIP_NAME}" >> $GITHUB_ENV
+        echo "DATE_STR=${DATE}" >> $GITHUB_ENV
+        
+        # Clean the repository for packaging
+        find . -name '.git*' -type f -delete
+        find . -name '.git*' -type d -exec rm -rf {} +
+        
+        # Create a version file
+        echo "${TAG_NAME}: https://github.com/${{ github.repository }}/releases/tag/${TAG_NAME}" > VERSION.TXT
+
+    - name: Create Zip Archive
+      run: |
+        zip -r -9 "${{ env.ZIP_NAME }}" .
+
+    - name: Upload Artifact for Release
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-package
+        path: ${{ env.ZIP_NAME }}
+
+    - name: Create GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "${{ env.ZIP_NAME }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ env.TAG_NAME }}
+        name: "Android Tools ${{ env.TAG_NAME }}"
+        body: |
+          Automated release of Android Tools.
+          Date: ${{ env.DATE_STR }}
+          Random ID: ${{ env.RANDOM_ID }}
