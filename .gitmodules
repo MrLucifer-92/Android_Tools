@@ -1,0 +1,30 @@
+[submodule "ROM_DETECTIVE"]
+	path = ROM_DETECTIVE
+	url = https://github.com/ravindu644/THE_DETECTIVE.git
+[submodule "LIB_DETECTIVE"]
+	path = LIB_DETECTIVE
+	url = https://github.com/ravindu644/THE_DETECTIVE.git
+[submodule "samloader-actions"]
+	path = samloader-actions
+	url = https://github.com/ravindu644/samloader-actions.git
+[submodule "patch-recovery-revived"]
+	path = patch-recovery-revived
+	url = https://github.com/ravindu644/patch-recovery-revived.git
+[submodule "Android_Image_Tools"]
+	path = Android_Image_Tools
+	url = https://github.com/ravindu644/Android_Image_Tools.git
+[submodule "android-partition-tools"]
+	path = android-partition-tools
+	url = https://github.com/ravindu644/android-partition-tools.git
+[submodule "Custom_LKM_Loader"]
+	path = Custom_LKM_Loader
+	url = https://github.com/ravindu644/Custom_LKM_Loader.git
+[submodule "LKM_Tools"]
+	path = LKM_Tools
+	url = https://github.com/ravindu644/LKM_Tools.git
+[submodule "LinuxRDP"]
+	path = LinuxRDP
+	url = https://github.com/ravindu644/LinuxRDP.git
+[submodule "AIK-Linux-mirror"]
+	path = AIK-Linux-mirror
+	url = https://github.com/ravindu644/AIK-Linux-mirror.git
