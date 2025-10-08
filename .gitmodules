@@ -1,27 +1,35 @@
 [submodule "ROM_DETECTIVE"]
 	path = ROM_DETECTIVE
 	url = https://github.com/ravindu644/THE_DETECTIVE.git
+	branch = main
 [submodule "LIB_DETECTIVE"]
 	path = LIB_DETECTIVE
 	url = https://github.com/ravindu644/THE_DETECTIVE.git
+	branch = lib-finder
 [submodule "samloader-actions"]
 	path = samloader-actions
 	url = https://github.com/ravindu644/samloader-actions.git
+	branch = stable
 [submodule "patch-recovery-revived"]
 	path = patch-recovery-revived
 	url = https://github.com/ravindu644/patch-recovery-revived.git
+	branch = main
 [submodule "Android_Image_Tools"]
 	path = Android_Image_Tools
 	url = https://github.com/ravindu644/Android_Image_Tools.git
+	branch = next-stable
 [submodule "android-partition-tools"]
 	path = android-partition-tools
 	url = https://github.com/ravindu644/android-partition-tools.git
+	branch = main
 [submodule "Custom_LKM_Loader"]
 	path = Custom_LKM_Loader
 	url = https://github.com/ravindu644/Custom_LKM_Loader.git
+	branch = main
 [submodule "LKM_Tools"]
 	path = LKM_Tools
 	url = https://github.com/ravindu644/LKM_Tools.git
+	branch = master
 [submodule "LinuxRDP"]
 	path = LinuxRDP
 	url = https://github.com/ravindu644/LinuxRDP.git
