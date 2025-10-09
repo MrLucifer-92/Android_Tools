@@ -36,3 +36,6 @@
 [submodule "AIK-Linux-mirror"]
 	path = AIK-Linux-mirror
 	url = https://github.com/ravindu644/AIK-Linux-mirror.git
+[submodule "Android-Kernel-Tutorials"]
+	path = Android-Kernel-Tutorials
+	url = https://github.com/ravindu644/Android-Kernel-Tutorials.git
